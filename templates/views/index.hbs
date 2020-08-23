@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="/image/weather.png">
+    <link rel="stylesheet" href="/css/style.css"> 
+    <script src="/js/app.js" async></script>
+</head>
+
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>use this side to get weather</p>
+<form>
+    <input placeholder="location"/>
+    <button>Submit</button>
+    <p id="message-1"></p>
+    <p id="message-2"></p>
+</form>
+    </div>
+   {{>footer}}
+</body>
+</html>
