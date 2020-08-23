@@ -38,14 +38,14 @@ app.use(express.static(publicDirectorypath))
 
 app.get('/', (req,res)=>{
     res.render('index', {
-        title : 'weather app',
+        title : 'Weather',
         name : 'shubham'
     })
 })
 
 app.get('/weather',(req, res)=>{
 if(!req.query.address){
-    return res.send({error : 'must provide address'})
+    return res.send({error : 'Must Provide Address'})
 }
 
 geoCode(req.query.address , (error , {latitude,longitude,location}={})=>{
@@ -70,8 +70,8 @@ forecast(latitude,longitude, (error, forecastData) => {
 })
 app.get('/help', (req, res)=>{
         res.render('help', {
-            help : 'this is our help page',
-            title : 'help',
+            help : 'This is our help page',
+            title : 'Help',
             name: 'shubham'
         })
     
@@ -90,16 +90,16 @@ app.get('/about',(req, res)=>{
 app.get('/help/*', (req, res)=>{
     res.render('404',{
         title:'404 Error',
-        msg:'help article not found'
+        msg:'Help article not found'
     })
 })
 
 app.get('*',(req,res)=>{
     res.render('404',{
         title:'404 Error',
-        msg : 'page not found'
+        msg : 'Page not found'
     })
 })
 
 
-app.listen(port, () => console.log(`Example app listening on port`+port))
+app.listen(port, () => console.log(`Example app listening on port` + port))
