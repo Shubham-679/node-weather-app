@@ -11,7 +11,8 @@ const forecast = (latitude, longitude , callback)=>{
     }else if (body.error) {
         callback('plz give correct coordinates', undefined)
     }else {
-        callback(undefined, body.current.weather_descriptions[0] + '. Its a currently : ' + body.current.temperature + ' and it feels like : ' + body.current.feelslike,)
+        console.log(body.current.weather_descriptions[0]);
+        callback(undefined, body.current.weather_descriptions[0] + '. Its a currently : ' + body.current.temperature + ' and it feels like : ' + body.current.feelslike +' and humidity : '+ body.current.humidity)
     }
     })
     }
