@@ -1,0 +1,1 @@
+var result = Number(x1) + Number(x2) - Number(x3)
